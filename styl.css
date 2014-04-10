@@ -1,0 +1,37 @@
+textarea {
+		resize: none;
+		border: none;
+		font-size: 14px;
+	}
+
+	div {
+		bottom: 0; left: 0; top: 0; right: 0;
+		margin: auto;
+		position: absolute;
+		width: 50%;
+		height: 95%;
+	}
+
+	td {
+		vertical-align: top;
+		font-size: 14px;
+
+		padding: 0px;
+		text-align: center;
+
+	}
+
+	td#settingsRow {
+		padding: 2px;
+	}
+
+	input#slider {
+		vertical-align: middle;
+		padding: 2px;
+	}
+
+	button#saveButton {
+		float: left;
+		padding: 2px;
+	}
+

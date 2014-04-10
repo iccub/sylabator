@@ -2,43 +2,18 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <script src="skrypt.js"></script>
+<script src="FileSaver.js"></script>
 <head>
-	<title>SYLABATOR v0.1</title>
+	<link rel="stylesheet" href="styl.css">
+	<title>SYLABATOR v0.2</title>
 </head>
-<body onload="countSyllabes()";>
-
-	<style type="text/css">
-	textarea {
-		resize: none;
-		border: none;
-		font-size: 14px;
-	}
-
-	div {
-		bottom: 0; left: 0; top: 0; right: 0;
-		margin: auto;
-		position: absolute;
-		width: 50%;
-		height: 95%;
-	}
-
-	td {
-		vertical-align: top;
-		font-size: 14px;
-
-		padding: 0px;
-		text-align: center;
-
-	}
-
-
-	</style>
-
+<body onload="countSyllabes(); updateSyllabeCount();";>
 	<div>
 		<table border="1">
 			<tr>
-				<td colspan="2">
-					SYLABATOR v0.1
+				<td id="settingsRow" colspan="2">
+					<button id="saveButton" type="saveButton" onclick="save()">Zapisz</button>
+					Docelowa ilość sylab: <input id ="slider" type="range" name="iloscSylab" min="5" max="20" value="14" onchange="updateSyllabeCount(); countSyllabes();"> <span id="syllabeCounter"></span>
 				</td>
 			</tr>
 			<tr>
